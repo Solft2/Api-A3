@@ -2,27 +2,20 @@ package com.a3.api.Entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-<<<<<<< HEAD
+
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
-=======
->>>>>>> bc6c2db3ab999a76cf2c858cd1232196cf6d5635
+
+
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-<<<<<<< HEAD
 @Table(name = "tb_user")
 public class User {
     
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-=======
-@Table()
-public class User {
-    
-	@Id
->>>>>>> bc6c2db3ab999a76cf2c858cd1232196cf6d5635
 	private Long Id;
 	@Column
 	private String name;
@@ -105,8 +98,7 @@ public class User {
 	public void setOpen(boolean open) {
 		this.open = open;
 	}
+	}	
 	
 	
 	
-	
-}

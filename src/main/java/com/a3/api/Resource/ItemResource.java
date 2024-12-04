@@ -21,48 +21,38 @@ import com.a3.api.Services.ItemService;
 @RestController
 @RequestMapping(value = "/Itens")
 public class ItemResource {
-	
-	@Autowired
-	private ItemService service;
-	
-	@GetMapping
-	public ResponseEntity<List<Item>> findAll(){
-		List<Item> list = service.findAll();
-		return ResponseEntity.ok().body(list);
-	}
-	
-    @GetMapping(value = "/{id}")
-<<<<<<< HEAD
-    public ResponseEntity<Item> findById(@PathVariable Long id){
-=======
-    public ResponseEntity<Item> findById(@PathVariable String id){
->>>>>>> bc6c2db3ab999a76cf2c858cd1232196cf6d5635
-    	Item obj = service.findById(id);
-    	return ResponseEntity.ok().body(obj);
+    
+    @Autowired
+    private ItemService service;
+    
+    @GetMapping
+    public ResponseEntity<List<Item>> findAll(){
+        List<Item> list = service.findAll();
+        return ResponseEntity.ok().body(list);
     }
+    
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<Item> findById(@PathVariable Long id){
+        Item obj = service.findById(id);
+        return ResponseEntity.ok().body(obj);
+    }
+
     @PostMapping
     public ResponseEntity<Item> insert(@RequestBody Item obj){
-    	obj = service.insert(obj);
-    	URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getNome()).toUri();
-    	return ResponseEntity.created(uri).body(obj);
+        obj = service.insert(obj);
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getNome()).toUri();
+        return ResponseEntity.created(uri).body(obj);
     }
+
     @DeleteMapping(value = "/{id}")
-<<<<<<< HEAD
     public ResponseEntity<Void> delete(@PathVariable Long id){
-=======
-    public ResponseEntity<Void> delete(@PathVariable String id){
->>>>>>> bc6c2db3ab999a76cf2c858cd1232196cf6d5635
-    	service.delete(id);
-    	return ResponseEntity.noContent().build();
+        service.delete(id);
+        return ResponseEntity.noContent().build();
     }
     
     @PutMapping(value = "/{id}")
-<<<<<<< HEAD
     public ResponseEntity<Item> update(@PathVariable Long id, @RequestBody Item obj){
-=======
-    public ResponseEntity<Item> update(@PathVariable String id, @RequestBody Item obj){
->>>>>>> bc6c2db3ab999a76cf2c858cd1232196cf6d5635
-    	obj = service.update(id,obj);
-    	return ResponseEntity.ok().body(obj);
+        obj = service.update(id,obj);
+        return ResponseEntity.ok().body(obj);
     }
- }
+}
