@@ -32,7 +32,11 @@ public class ItemResource {
 	}
 	
     @GetMapping(value = "/{id}")
+<<<<<<< HEAD
     public ResponseEntity<Item> findById(@PathVariable Long id){
+=======
+    public ResponseEntity<Item> findById(@PathVariable String id){
+>>>>>>> bc6c2db3ab999a76cf2c858cd1232196cf6d5635
     	Item obj = service.findById(id);
     	return ResponseEntity.ok().body(obj);
     }
@@ -43,13 +47,21 @@ public class ItemResource {
     	return ResponseEntity.created(uri).body(obj);
     }
     @DeleteMapping(value = "/{id}")
+<<<<<<< HEAD
     public ResponseEntity<Void> delete(@PathVariable Long id){
+=======
+    public ResponseEntity<Void> delete(@PathVariable String id){
+>>>>>>> bc6c2db3ab999a76cf2c858cd1232196cf6d5635
     	service.delete(id);
     	return ResponseEntity.noContent().build();
     }
     
     @PutMapping(value = "/{id}")
+<<<<<<< HEAD
     public ResponseEntity<Item> update(@PathVariable Long id, @RequestBody Item obj){
+=======
+    public ResponseEntity<Item> update(@PathVariable String id, @RequestBody Item obj){
+>>>>>>> bc6c2db3ab999a76cf2c858cd1232196cf6d5635
     	obj = service.update(id,obj);
     	return ResponseEntity.ok().body(obj);
     }

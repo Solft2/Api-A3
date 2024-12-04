@@ -19,7 +19,11 @@ public class ItemService {
 		return repository.findAll();
 	}
 	
+<<<<<<< HEAD
 	public Item findById(Long id) {
+=======
+	public Item findById(String id) {
+>>>>>>> bc6c2db3ab999a76cf2c858cd1232196cf6d5635
 		Optional<Item> obj = repository.findById(id);
 		return obj.get();
 	}
@@ -28,11 +32,19 @@ public class ItemService {
 		return repository.save(obj);
 	}
 	
+<<<<<<< HEAD
 	public void delete(Long id) {
 		repository.deleteById(id);
 	}
 	
 	public Item update(Long id, Item obj) {
+=======
+	public void delete(String id) {
+		repository.deleteById(id);
+	}
+	
+	public Item update(String id, Item obj) {
+>>>>>>> bc6c2db3ab999a76cf2c858cd1232196cf6d5635
 		Item entity = repository.getReferenceById(id);
 		updateData(entity,obj);
 		return repository.save(entity);

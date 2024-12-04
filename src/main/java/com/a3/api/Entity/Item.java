@@ -9,18 +9,27 @@ import java.math.BigDecimal;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+<<<<<<< HEAD
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+=======
+>>>>>>> bc6c2db3ab999a76cf2c858cd1232196cf6d5635
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
+<<<<<<< HEAD
 @Table(name = "tb_item")
 public class Item {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column
+=======
+@Table()
+public class Item {
+    @Id
+>>>>>>> bc6c2db3ab999a76cf2c858cd1232196cf6d5635
     private String nome;
 
     @Column
@@ -29,6 +38,7 @@ public class Item {
     @Column
     private String descricao;
 
+<<<<<<< HEAD
     
     public Long getId() {
 		return id;
@@ -39,6 +49,9 @@ public class Item {
 	}
 
 	public String getNome() {
+=======
+    public String getNome() {
+>>>>>>> bc6c2db3ab999a76cf2c858cd1232196cf6d5635
         return nome;
     }
 
