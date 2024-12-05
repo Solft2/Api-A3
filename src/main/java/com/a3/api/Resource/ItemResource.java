@@ -40,7 +40,7 @@ public class ItemResource {
     @PostMapping
     public ResponseEntity<Item> insert(@RequestBody Item obj){
         obj = service.insert(obj);
-        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getNome()).toUri();
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getName()).toUri();
         return ResponseEntity.created(uri).body(obj);
     }
 

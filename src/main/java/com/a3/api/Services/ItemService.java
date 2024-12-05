@@ -39,9 +39,11 @@ public class ItemService {
     }
 
     private void updateData(Item entity, Item obj) {
-        entity.setDescricao(obj.getDescricao());
-        entity.setNome(obj.getNome());
-        entity.setValor(obj.getValor());
-        entity.setCategoria(obj.getCategoria());
+        entity.setCategory(obj.getCategory());
+        entity.setCover(obj.getCover());
+        entity.setDescription(obj.getDescription());
+        entity.setName(obj.getName());
+        entity.setPrice(obj.getPrice());
+        
     }
 }

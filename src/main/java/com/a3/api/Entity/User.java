@@ -22,7 +22,7 @@ public class User {
 	@Column
 	private String email;
 	@Column
-	private String address;
+	private String addres;
 	@Column
 	private String avatar;
 	@Column
@@ -32,12 +32,12 @@ public class User {
 	
 	public User() {}
 
-	public User(long id, String name, String email, String address, String avatar, String cover, boolean open) {
+	public User(long id, String name, String email, String addres, String avatar, String cover, boolean open) {
 		super();
 		Id = id;
 		this.name = name;
 		this.email = email;
-		this.address = address;
+		this.addres = addres;
 		this.avatar = avatar;
 		this.cover = cover;
 		this.open = open;
@@ -67,12 +67,12 @@ public class User {
 		this.email = email;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getAddres() {
+		return addres;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setAddress(String addres) {
+		this.addres = addres;
 	}
 
 	public String getAvatar() {
